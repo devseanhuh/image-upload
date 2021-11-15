@@ -28,3 +28,15 @@
     height: 30px;
     cursor: pointer;
 }
+
+.image-preview {
+    width: 0;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.image-preview--show {
+    width: 80%;
+    transition: 0.5s;
+}
