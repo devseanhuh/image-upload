@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./UploadForm.scss";
+import { toast } from "material-react-toastify";
 
 const UploadForm = () => {
   const [file, setFile] = useState(null);
@@ -21,9 +22,11 @@ const UploadForm = () => {
       const res = await axios.post("/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-      console.log({ res });
+      // console.log({ res });
+      toast.success("이미지 업로드 성공");
     } catch (err) {
       console.error(err);
+      toast.error(err.message);
     }
   };
 
