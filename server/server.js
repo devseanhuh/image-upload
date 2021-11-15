@@ -24,7 +24,7 @@ const upload = multer({
 });
 
 const app = express();
-const PORT = 6000;
+const PORT = 5050;
 
 mongoose
   .connect(process.env.MONGO_URI)
